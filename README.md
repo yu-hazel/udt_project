@@ -1,13 +1,21 @@
 # 🎾 우리동네 테니스 (UDT)
 
----
-
 ## 🤟 팀원 소개
 
-<b>Project Manager</b> 이승빈
+### 이승빈
+role : PM, wireframe, publishing
 
-<b>Team Members</b> 박강민 장기성 권윤지 유혜인
+### 박강민
+role : DB, publishing
 
-## 📣 서비스 개요
+### 장기성
+role : wireframe, publishing
+
+### 권윤지
+role : design, publishing
+
+### 유혜인
+role : design, publishing(leader)
+
 
 
