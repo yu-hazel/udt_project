@@ -76,7 +76,7 @@ nav .userMenu a {
 }
 nav .catMenu a:hover,
 nav .userMenu a:hover {
-    color: #70f423;
+    color: #57d40f;
     /* figma상 색이 너무 쨍해 채,명도 낮춤 */
 }
 nav .catMenu a {
