@@ -8,140 +8,140 @@
 /* 여기어때 잘난체 */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid navy; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid navy; */
 }
 :root {
-    font-family: 'Pretendard Variable', sans-serif;
+  font-family: 'Pretendard Variable', sans-serif;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 header .topBanner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    background-color: #000;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 13px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 13px 100px;
 }
 nav .logoCatWrapper {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 nav .logo {
-    font-family: 'Jalnan';
-    color: #9552F0;
-    font-size: 24px;
-    font-weight: 400;
-    position: relative;
+  font-family: 'Jalnan';
+  color: #9552F0;
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
 }
 nav .logo::before {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: url(/udt_project/test/img/pin_logo.png) no-repeat;
-    background-size: cover;
-    left: -40px;
-    top: -7px;
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url(/udt_project/test/img/pin_logo.png) no-repeat;
+  background-size: cover;
+  left: -40px;
+  top: -7px;
 }
 nav .catMenu,
 nav .userMenu {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    gap: 17px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
 }
 nav .catMenu a,
 nav .userMenu a {
-    color: #000;
-    font-weight: 500;
-    transition: 0.3s;
+  color: #000;
+  font-weight: 500;
+  transition: 0.3s;
 }
 nav .catMenu a:hover,
 nav .userMenu a:hover {
-    color: #9747FF;
+  color: #9747FF;
 }
 nav .catMenu a {
-    font-size: 18px;
+  font-size: 18px;
 }
 nav .userMenu a {
-    font-size: 16px;
-    position: relative;
+  font-size: 16px;
+  position: relative;
 }
 nav .userMenu a:last-child::before {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 16px;
-    background: url(/udt_project/test/img/mypage.png) no-repeat;
-    background-size: cover;
-    right: -19px;
-    top: 1px;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(/udt_project/test/img/mypage.png) no-repeat;
+  background-size: cover;
+  right: -19px;
+  top: 1px;
 }
 section.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    width: 100%;
-    height: 100vh;
-    gap: 30px;
-    background-color: #F4ECFF;
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  height: 100vh;
+  gap: 30px;
+  background-color: #F4ECFF;
+  position: relative;
+  overflow: hidden;
 }
 .main h2 {
-    font-family: 'Jalnan';
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 130%;
-    margin-left: 200px;
+  font-family: 'Jalnan';
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-left: 200px;
 }
 .main span {
-    font-size: 80px;
-    color: #77D837;
+  font-size: 80px;
+  color: #77D837;
 }
 .main .mainBt {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-    margin-left: 200px;
-    z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-left: 200px;
+  z-index: 10;
 }
 .main .mainBt a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-    height: 115px;
-    padding: 82px 58px;
-    border-radius: 10px;
-    background-color: #9742ff;
-    color: #fff;
-    font-size: 28px;
-    font-weight: 700;
-    transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  height: 115px;
+  padding: 82px 58px;
+  border-radius: 10px;
+  background-color: #9742ff;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  transition: 0.3s;
 }
 .main .mainBt a:hover {
-    background-color: #77D837;
+  background-color: #77D837;
 }
 /* lottie-player {
     display: flex;
@@ -150,33 +150,181 @@ section.main {
     transform: translateX(25%);
 } */
 dotlottie-player {
-    position: absolute;
-    right: 100px;
+  position: absolute;
+  right: 100px;
 }
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: #000;
-    padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #000;
+  padding: 40px 0;
 }
 footer .serviceSec {
-    display: inherit;
-    gap: 30px;
+  display: inherit;
+  gap: 30px;
 }
 footer .serviceSec a {
-    color: #fff;
-    font-size: 16px;
+  color: #fff;
+  font-size: 16px;
 }
 footer .serviceSec .personal {
-    color: #d0aaff;
+  color: #d0aaff;
 }
 footer .copyright {
-    display: flex;
-    gap: 30px;
-    color: #fff;
-    font-size: 16px;
+  display: flex;
+  gap: 30px;
+  color: #fff;
+  font-size: 16px;
 }
-
+/* 지역 선택페이지 CSS */
+.selectArea {
+  background: #5d5c5c;
+  display: flex;
+}
+.reservation {
+  width: 450px;
+  height: 800px;
+  padding: 20px;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choice .lesson,
+.choice .court {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 22px;
+  font-weight: 800;
+  font-family: pretender variable;
+}
+.choice .lesson {
+  border-bottom: 2px solid #d3f131;
+}
+.choicePlace{
+  display: flex;
+  padding: 10px 40px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+}
+/* 동네선택하기 */
+.cont-select {
+  position: relative;
+  width: 170px;
+}
+.btn-select {
+  width: 100%;
+  padding: 13px 30px 13px 14px;
+  font-size: 16px;
+  line-height: 14px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-bottom-color: #818181;
+  cursor: pointer;
+  text-align: center;
+  /* 말줄임 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.btn-select:active,
+.btn-select:focus {
+  /* border: 1px solid #9B51E0;
+  outline: 3px solid #F8E4FF; */
+}
+.list-member {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  width: 100%;
+  /* top: 35px; */
+  left: 0;
+  padding: 0;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+  background: #fff;
+}
+.btn-select.on+.list-member {
+  display: block;
+}
+.list-member li {
+  width: 100%;
+  /* height: 40px; */
+  /* padding: 5px 8px; */
+  box-sizing: border                                                                  -box;
+}
+.list-member li button {
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  background-color: #fff;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  text-align: center;
+  /* 말줄임 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list-member li button:hover,
+.list-member li button:focus {
+  background-color: #9a9a9a;
+  color: #fff;
+}
+.c_list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+  border: 1px solid #000;
+}
+.cList{
+  /* text-align: center; */
+  font-size: 20px;
+  font-weight: bold;
+}
+.cL{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.coachList{
+  width: 370px;
+  padding: 10px 20px;
+  gap: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.40);
+}
+.coachList span{
+  font-size: 20px;
+  font-weight: bold;
+}
+/* .coachList .badge{
+  position: absolute;
+  right: 1509px;
+  top: 400px;
+  width: 21px;
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #77D837;
+} */
