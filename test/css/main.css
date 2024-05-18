@@ -181,12 +181,15 @@ footer .copyright {
 }
 /* 지역 선택페이지 CSS */
 .selectArea {
-  background: #5d5c5c;
+  /* background: #5d5c5c; */
   display: flex;
+  padding: 30px 20px;
+  gap: 40px;
+  border-top: 1px solid #000;
 }
 .reservation {
   width: 450px;
-  height: 800px;
+  /* height: 800px; */
   padding: 20px;
   gap: 32px;
   border-radius: 8px;
@@ -283,6 +286,9 @@ footer .copyright {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.rdBt {
+  border-radius: 0 0 8px 8px;
 }
 .list-member li button:hover,
 .list-member li button:focus {

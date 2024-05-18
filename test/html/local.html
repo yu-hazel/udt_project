@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,7 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <link rel="stylesheet" href="/udt_project/test/css/main.css">
+  <link rel="stylesheet" href="/udt_project/test/css/map.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
             <li><button type="button">청주시 상당구</button></li>
             <li><button type="button">청주시 청원구</button></li>
             <li><button type="button">청주시 서원구</button></li>
-            <li><button type="button">청주시 흥덕구</button></li>
+            <li><button class="rdBt" type="button">청주시 흥덕구</button></li>
           </ul>
         </article>
       </div>
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-    <div class="#">map</div>
+    <div id="map"></div>
   </div>
   <footer>
     <div class="serviceSec">
@@ -102,6 +102,10 @@
     </div>
   </footer>
   <script src="/udt_project/test/js/choisePlace.js"></script>
+    <!-- api 맵 구현 script -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/udt_project/test/js/supabaseMapScript.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8fa566ae5d765eb1a068de2fe2240a95"></script>
 </body>
 
 </html>
