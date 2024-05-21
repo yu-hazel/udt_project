@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강사 상세 페이지</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/udt_project/test/css/coach_detail.css">
+</head>
+
+<body>
+  <header>
+    <div class="topBanner">회원가입하고 즉시 20% 레슨 할인쿠폰 받기!</div>
+    <nav>
+      <div class="logoCatWrapper">
+        <div class="logo">우리동네 테니스</div>
+        <div class="catMenu">
+          <a href="#">테니스 예약</a>
+          <a href="#">커뮤니티</a>
+          <a href="#">비즈니스</a>
+        </div>
+      </div>
+      <div class="userMenu">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">마이페이지</a>
+      </div>
+    </nav>
+  </header>
+  <section class="coachDetail">
+    <div class="detailInner">
+      <div class="detailInTop">
+        <div class="inTopLeft">
+          <div class="coachCard">
+            <div class="coachImg">
+              <!-- 코치 사진 추가 -->
+            </div>
+            <div class="coachCardDetail">
+              <div class="nameAge">
+                <h2 class="name">장기성</h2>
+                <span class="age">29세</span>
+              </div>
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                4.9
+              </div>
+              <div class="liked">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="percent">
+            <div class="responded">
+              <div class="txtbox B01">
+                <span>응답률</span> <span>99%</span>
+              </div>
+            </div>
+            <span class="rectangle"></span>
+            <div class="consulting">
+              <div class="txtbox B02">
+                <span>채팅상담</span> <span>30회</span>
+              </div>
+            </div>
+            <span class="rectangle"></span>
+            <div class="matching">
+              <div class="txtbox B03">
+                <span>매칭률</span> <span>50%</span>
+              </div>
+            </div>
+            <span class="rectangle"></span>
+            <div class="rematching">
+              <div class="txtbox B04">
+                <span>재매칭률</span> <span>30%</span>
+              </div>
+            </div>
+          </div>
+          <div class="lesson">
+            <div class="lessonbox B01">
+              <div class="lessonTitle">
+                <h3>최초 레슨 이용료</h3><span>부가세포함</span>
+              </div>
+              <div class="selectbox01">
+                <span>구분</span><span>시간</span><span>가격</span>
+              </div>
+              <div class="selectbox02">
+                <span>최초1회</span><span>25분</span><span>20,000원</span>
+              </div>
+            </div>
+            <div class="lessonbox B02">
+              <div class="lessonTitle">
+                <h3>일반 레슨 이용료</h3><span>부가세포함</span>
+              </div>
+              <div class="selectbox01">
+                <span>구분</span><span>시간</span><span>가격</span>
+              </div>
+              <div class="selectbox02">
+                <span>최초1회</span><span>25분</span><span>20,000원</span>
+              </div>
+            </div>
+          </div>
+          <button class="coachBt">
+            견적 요청하기
+          </button>
+        </div>
+        <div class="inTopRight">
+          <div class="coachInfo">
+            <!-- 렉탱글 안넣고 구성하는게 더 시멘틱할듯 해서 뺐어요 -->
+            <ul class="infoTitle">
+              <li> <span>자격 및 경력</span>
+                <ul class="infoContents">
+                  <li>마포고등학교, 울산대학교 졸업</li>
+                  <li>전국체전 테니스 대회 우승</li>
+                  <li>전국 학생 선수권 테니스 대회 우승</li>
+                  <li>전국 춘천오픈 대회 복식 준우승</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="infoTitle">
+              <li><span>커리큘럼</span>
+                <ul class="infoContents">
+                  <li>3시간만에 왕초보 탈출! 기초 레슨</li>
+                  <li>테니스 무조건 잘 치는 법</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="infoTitle">
+              <li><span>레슨 스케쥴</span>
+                <ul class="infoContents">
+                  <li>실내 06:00~17:00 / 야외 18:30~22:00</li>
+                  <li>Break Time : 12시~13시 / 17시~18시</li>
+                  <li>매주 토요일 휴강</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="infoTitle">
+              <li><span>레슨 가능 지역</span>
+                <ul class="infoContents">
+                  <li>청주시 흥덕구</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="detailInBottom">
+        <div class="inBottomTitle">
+          <span>우리동네 pick!</span> <span>이달의 강사</span>
+        </div>
+        <div class="coachSlider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+        <!-- 캐러셀 라이브러리 활용 -->
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="serviceSec">
+      <a href="#">이용약관</a>
+      <a href="#" class="personal">개인정보처리방침</a>
+    </div>
+    <div class="copyright">
+      <div>&copy; 미정이네</div>
+      <div>대표 : 이승빈</div>
+      <div>공동대표 : 박강민 장기성 권윤지 유혜인</div>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/18d360354d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
