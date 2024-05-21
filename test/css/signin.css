@@ -104,6 +104,11 @@ input {
 #userId + button:hover {
     background-color: #a680ff;
 }
+#passError {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff4d4d;
+}
 .emailWrapper {
     display: flex;
     justify-content: space-between;
