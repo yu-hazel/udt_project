@@ -11,13 +11,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid navy;
+  /* outline: 1px solid navy; */
 }
 :root {
   font-family: 'Pretendard Variable', sans-serif;
 }
+/*  */
+a:visited,
+a:active,
+a:link,
 a {
   text-decoration: none;
+  color: #000;
 }
 header {
   display: flex;
@@ -125,7 +130,6 @@ nav .userMenu a:last-child::before {
   width: 100%;
   height: 725px;
   padding: 10px 0;
-  flex: 1 1 100%;
 }
 .coachCard {
   display: flex;
@@ -183,12 +187,12 @@ nav .userMenu a:last-child::before {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.liked i {
   width: 24px;
   height: 24px;
+}
+/* 아이콘 위 부모에게 px값 줬음 */
+.liked i {
   color: #5E5E5E;
-  text-align: center;
 }
 .percent {
   display: flex;
@@ -269,7 +273,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1 0 0;
   align-self: stretch;
 }
 .selectbox01 > span, .selectbox02 > span {
@@ -294,6 +297,10 @@ h3 {
   line-height: 150%;
   letter-spacing: -0.22px;
 }
+.coachBt:hover {
+  cursor: pointer;
+  background: #B88CF0;
+}
 .inTopRight {
   display: flex;
   flex-direction: column;
@@ -302,7 +309,6 @@ h3 {
   width: 100%;
   height: 725px;
   gap: 30px;
-  flex: 1 1 100%;
 }
 .coachInfo {
   display: flex;
@@ -339,6 +345,7 @@ h3 {
 }
 .detailInBottom {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -356,11 +363,12 @@ h3 {
   color: #B88CF0;
 }
 .coachSlider {
-  width: 1300px;
+  width: 100%;
 }
 .swiper {
-  width: 80%;
-  height: 100%;
+  width: 1200px;
+  height: 244px;
+  padding: 0 50px;
 }
 
 .swiper-slide {
@@ -370,15 +378,42 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slideImg {
+  width: 195px;
+  height: 205px;
+  background: url(/udt_project/test/img/coachCard.png)no-repeat 100% / cover;
+  box-shadow: 1.948px 2.597px 19.48px 0px rgba(0, 0, 0, 0.30);
 }
-
+.swiper-slide .coachCardDetail {
+  gap: 10px;
+  padding: 0 13px;
+}
+.swiper-slide .nameAge {
+  gap: 6px;
+}
+.swiper-slide .name {
+  font-size: 16px;
+}
+.swiper-slide .age {
+  font-size: 13px;
+}
+.swiper-slide .star {
+  font-size: 13px;
+}
+.swiper-slide .star i {
+  width: 16px;
+  height: 16px;
+}
+/* 아이콘에다가 px값 줬음 */
+.swiper-slide .liked i {
+  width: 16px;
+  height: 16px;
+}
+.swiper-slide > a:hover > .slideImg {
+  filter: brightness(85%)
+}
 footer {
   display: flex;
   flex-direction: column;
