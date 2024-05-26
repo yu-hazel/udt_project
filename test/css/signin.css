@@ -157,11 +157,19 @@ input {
     height: 30px;
     background-color: #fff;
     border: none;
-    border-radius: 10px;
     border-bottom: 1px solid #e4e5ed;
     font-size: 14px;
     color: #686868;
     transition: 0.3s;
+}
+.domainList li:first-of-type .domainOption {
+    border-radius: 10px 10px 0 0;
+}
+.domainList li:nth-of-type(2) .domainOption {
+    border-radius: 0;
+}
+.domainList li:last-of-type .domainOption {
+    border-radius: 0 0 10px 10px;
 }
 .domainList button:last-of-type {
     border: none;
