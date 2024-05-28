@@ -26,16 +26,18 @@ async function loadData() {
   // this.키이름 = 인자
   function Ping(storeName, Latitude, Longitude) {
     this.storeName = storeName;
-    this.Latitude = Latitude; 
+    this.Latitude = Latitude;
     this.Longitude = Longitude;
   }
 
   let storeList = [];
 
   for (const pin of pindata) {
-    let store = new Ping(pin.name, pin.Latitude, pin.Longitude);
-    storeList.push(store);
-  }
+    // 각 핀 데이터에 대해 반복문 실행
+    let store = new Ping(pin.name, pin.Latitude, pin.Longitude); // 새로운 Ping 객체 생성
+    storeList.push(store); // storeList 배열에 store 객체 추가
+  } // 반복문 종료
+
   console.log(storeList);
 
   var imageSrc = "/udt_project/test/img/pin_logo.png", // 커스텀마커 이미지
@@ -54,8 +56,9 @@ async function loadData() {
     });
   }
   // 오버레이후 보여지는 화면
-  var content =
-    '<div class="wrap">' +
+  // var content = document.querySelector("#wrap")
+  var content = 
+    '<div class="wrap">' + 
     '    <div class="info">' +
     '        <div class="title">' +
     "            무야호~" +
@@ -85,13 +88,8 @@ async function loadData() {
     overlay.setMap(map);
   });
   // 오버레이 닫기 버튼에 클릭 이벤트를 연결
-  document.querySelector(".close").addEventListener("click", function() {
+  document.querySelector(".close").addEventListener("click", function () {
     overlay.setMap(null);
-  });
-  // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-  // function closeOverlay() {
-  //   overlay.setMap(null);
-  // }
-  // closeOverlay();
+  }); 
 }
 window.addEventListener("load", loadData); //

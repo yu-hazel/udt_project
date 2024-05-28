@@ -13,112 +13,76 @@ async function loadData() {
   let mapBox = document.querySelector("#map"), // 지도의 중심좌표
     mapOpt = {
       center: new kakao.maps.LatLng(mainLat, mainLng), // 지도의 중심좌표
-      level: 5, // 지도의 확대 레벨
+      level: 3, // 지도의 확대 레벨
     };
 
   var map = new kakao.maps.Map(mapBox, mapOpt); // 지도를 생성합니다
 
   // 패턴화하기 1번째
-  // let storeList = [
-  //   {
-  //     storeName: `${pindata[0].name}`,
-  //     place: new kakao.maps.LatLng(
-  //       `${pindata[0].Latitude}`,
-  //       `${pindata[0].Longitude}`
-  //     ),
-  //   },
-  //   {
-  //     storeName: `${pindata[1].name}`,
-  //     place: new kakao.maps.LatLng(
-  //       `${pindata[1].Latitude}`,
-  //       `${pindata[1].Longitude}`
-  //     ),
-  //   },
-  //   {
-  //     storeName: `${pindata[2].name}`,
-  //     place: new kakao.maps.LatLng(
-  //       `${pindata[2].Latitude}`,
-  //       `${pindata[2].Longitude}`
-  //     ),
-  //   },
-  //   {
-  //     storeName: `${pindata[3].name}`,
-  //     place: new kakao.maps.LatLng(
-  //       `${pindata[3].Latitude}`,
-  //       `${pindata[3].Longitude}`
-  //     ),
-  //   },
-  //   {
-  //     storeName: `${pindata[4].name}`,
-  //     place: new kakao.maps.LatLng(
-  //       `${pindata[4].Latitude}`,
-  //       `${pindata[4].Longitude}`
-  //     ),
-  //   },
-  //   {
-  //     storeName: `${pindata[5].name}`,
-  //     place: new kakao.maps.LatLng(
-  //       `${pindata[5].Latitude}`,
-  //       `${pindata[5].Longitude}`
-  //     ),
-  //   },
-  // ];
-
-  //   // 1. 생성자 함수 ( 객체를 패턴화해서 만들어주는 애 )
-  function Store(storeName, Latitude, Longitude) {
-    this.storeName = storeName;
-    this.place = new kakao.maps.LatLng(Latitude, Longitude);
-  }
-  // this.키이름 = 인자
-  function Ping(storeName, Latitude, Longitude) {
-    this.storeName = storeName;
-    this.Latitude =  Latitude;
-    this.Longitude = Longitude;
-    // this.place = new kakao.maps.LatLng(Latitude, Longitude);
-  }
-
-  // let storeList = [
-  //   // new Store(pindata[0].name, pindata[0].Latitude, pindata[0].Longitude),
-  //   // new Store(pindata[1].name, pindata[1].Latitude, pindata[1].Longitude),
-  //   // new Store(pindata[2].name, pindata[2].Latitude, pindata[2].Longitude),
-  //   // new Store(pindata[3].name, pindata[3].Latitude, pindata[3].Longitude),
-  //   // new Store(pindata[4].name, pindata[4].Latitude, pindata[4].Longitude),
-  //   // new Store(pindata[5].name, pindata[5].Latitude, pindata[5].Longitude),
-  // ]
-  let storeList = [];
-
-  // for (let i = 0; i < pindata.length; i++) {
-  //   let store = new Store(
-  //     pindata[i].name,
-  //     pindata[i].Latitude,
-  //     pindata[i].Longitude
-  //   );
-  // }
-  for (const pin of pindata) {
-    let store = new Ping(
-      pin.name,
-      pin.Latitude,
-      pin.Longitude
-    );
-    storeList.push(store);
-  }
-  console.log(storeList);
-
-  var imageSrc = "/udt_project/test/img/pin_logo.png", // 커스텀마커 이미지
-    imageSize = new kakao.maps.Size(40), // 마커이미지의 크기입니다
-    imgOpt = { offset: new kakao.maps.Point(20, 40) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+  let storeList = [
+    {
+      storeName: `${pindata[0].name}`,
+      place: new kakao.maps.LatLng(
+        `${pindata[0].Latitude}`,
+        `${pindata[0].Longitude}`
+      ),
+    },
+    {
+      storeName: `${pindata[1].name}`,
+      place: new kakao.maps.LatLng(
+        `${pindata[1].Latitude}`,
+        `${pindata[1].Longitude}`
+      ),
+    },
+    {
+      storeName: `${pindata[2].name}`,
+      place: new kakao.maps.LatLng(
+        `${pindata[2].Latitude}`,
+        `${pindata[2].Longitude}`
+      ),
+    },
+    {
+      storeName: `${pindata[3].name}`,
+      place: new kakao.maps.LatLng(
+        `${pindata[3].Latitude}`,
+        `${pindata[3].Longitude}`
+      ),
+    },
+    {
+      storeName: `${pindata[4].name}`,
+      place: new kakao.maps.LatLng(
+        `${pindata[4].Latitude}`,
+        `${pindata[4].Longitude}`
+      ),
+    },
+    {
+      storeName: `${pindata[5].name}`,
+      place: new kakao.maps.LatLng(
+        `${pindata[5].Latitude}`,
+        `${pindata[5].Longitude}`
+      ),
+    },
+  ];
+  (imageSize = new kakao.maps.Size(40)), // 마커이미지의 크기입니다
+    (imgOpt = { offset: new kakao.maps.Point(20, 40) }); // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
   // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-  var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOpt)
-  
-  for (const ping of storeList) {
-    var markerPosition = new kakao.maps.LatLng(ping.Latitude, ping.Longitude);
-    var marker = new kakao.maps.Marker({
+  var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOpt),
+    markerPosition = new kakao.maps.LatLng(mainLat, mainLng); // 마커가 표시될 위치입니다
+
+  // 마커를 생성합니다
+  var marker = new kakao.maps.Marker({
     position: markerPosition,
     map: map,
-    image: markerImage,})
-  }
-  // 오버레이
+    image: markerImage, // 마커이미지 설정
+  });
+
+  // 커스텀 오버레이에 표시할 컨텐츠 입니다
+  // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
+  // 별도의 이벤트 메소드를 제공하지 않습니다
+
+  ///반복문으로 돌려야 됨 ( 패턴화 )
+  어;
   var content =
     '<div class="wrap">' +
     '    <div class="info">' +
@@ -156,6 +120,5 @@ async function loadData() {
   function closeOverlay() {
     overlay.setMap(null);
   }
-  closeOverlay();
 }
-window.addEventListener("load", loadData); //
+window.addEventListener("load", loadData);
