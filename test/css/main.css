@@ -97,6 +97,9 @@ nav .userMenu a:last-child::before {
   right: -19px;
   top: 1px;
 }
+.bottomNav {
+  display: none;
+}
 section.main {
   display: flex;
   flex-direction: column;
@@ -145,12 +148,6 @@ section.main {
 .main .mainBt a:hover {
   background-color: #77D837;
 }
-/* lottie-player {
-    display: flex;
-    position: absolute;
-    right: 0;
-    transform: translateX(25%);
-} */
 dotlottie-player {
   position: absolute;
   right: 100px;
@@ -160,7 +157,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   background-color: #000;
   padding: 40px 0;
 }
@@ -174,6 +171,11 @@ footer .serviceSec a {
 }
 footer .serviceSec .personal {
   color: #d0aaff;
+}
+footer .contact {
+  display: flex;
+  gap: 15px;
+  color: #fff;
 }
 footer .copyright {
   display: flex;

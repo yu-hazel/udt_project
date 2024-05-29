@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우리동네 테니스</title>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="/udt_project/test/css/main.css">
+    <link rel="stylesheet" media="all and (max-width:1199px)" href="/udt_project/test/css/main_tab.css">
+    <link rel="stylesheet" media="all and (max-width:766px)" href="/udt_project/test/css/main_mo.css">
 </head>
 
 <body>
     <header>
         <div class="topBanner">회원가입하고 즉시 20% 레슨 할인쿠폰 받기!</div>
-        <nav>
+        <nav class="topNav">
             <div class="logoCatWrapper">
                 <div class="logo">우리동네 테니스</div>
                 <div class="catMenu">
@@ -28,11 +28,19 @@
                 <a href="#">마이페이지</a>
             </div>
         </nav>
+        <nav class="bottomNav">
+            <a href="#"><iconify-icon icon="material-symbols-light:local-cafe-outline"></iconify-icon>커뮤니티</a>
+            <a href="local.html"><iconify-icon
+                    icon="material-symbols-light:calendar-month-outline"></iconify-icon>예약</a>
+            <a href="#"><iconify-icon icon="material-symbols-light:home-outline"></iconify-icon>홈</a>
+            <a href="#"><iconify-icon icon="circum:heart"></iconify-icon>찜</a>
+            <a href="login.html"><iconify-icon icon="fluent:person-20-regular"></iconify-icon>로그인</a>
+        </nav>
     </header>
     <section class="main">
         <h2><span>우</span>리<br><span>동</span>네에서<br><span>테</span>니스를 배우자!</h2>
         <div class="mainBt">
-            <a href="#">레슨 예약<br>바로가기</a>
+            <a href="local.html">레슨 예약<br>바로가기</a>
             <a href="#">코트 예약<br>바로가기</a>
         </div>
         <dotlottie-player src="https://lottie.host/f21be152-67b0-4007-bb1f-7d408b4d3981/LXoC7RUoOc.json"
@@ -43,12 +51,19 @@
             <a href="#">이용약관</a>
             <a href="#" class="personal">개인정보처리방침</a>
         </div>
+        <div class="contact">
+            <div>Contact</div>
+            <div>010-0000-0000</div>
+            <div>https://github.com/udtennis/udt_project</div>
+        </div>
         <div class="copyright">
             <div>&copy; 미정이네</div>
             <div>대표 : 이승빈</div>
             <div>공동대표 : 박강민 장기성 권윤지 유혜인</div>
         </div>
     </footer>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
 </body>
 
 </html>
