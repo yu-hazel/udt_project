@@ -378,6 +378,9 @@ section {
   border-radius: 13px;
   background-color: #fff;
 }
+.chatRoom .user .userTxt {
+  border-color: #d7c7ec;
+}
 .chatMessage {
   display: flex;
   flex-direction: column;
