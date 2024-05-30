@@ -7,6 +7,8 @@
   <title>강사 상세 페이지</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="/udt_project/test/css/coach_detail.css">
+  <link rel="stylesheet" media="all and (max-width: 1199px)" href="/udt_project/test/css/coach_detail_T.css">
+  <link rel="stylesheet" media="all and (max-width: 767px)" href="/udt_project/test/css/coach_detail_M.css">
 </head>
 
 <body>
@@ -130,6 +132,7 @@
                   <li>실내 06:00~17:00 / 야외 18:30~22:00</li>
                   <li>Break Time : 12시~13시 / 17시~18시</li>
                   <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
                 </ul>
               </li>
             </ul>
@@ -148,6 +151,8 @@
           <span>우리동네 pick!</span> <span>이달의 강사</span>
         </div>
         <div class="coachSlider">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -322,13 +327,10 @@
                 </a>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+
             <!-- <div class="swiper-pagination"></div> -->
           </div>
-
         </div>
-        <!-- 캐러셀 라이브러리 활용 -->
       </div>
     </div>
   </section>
@@ -347,13 +349,22 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 5,
+      slidesPerView: 2,
       spaceBetween: 10,
       loop: true,
-
+      breakpoints: {
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1199: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+      },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".coachSlider .swiper-button-next",
+        prevEl: ".coachSlider .swiper-button-prev",
       },
     });
   </script>

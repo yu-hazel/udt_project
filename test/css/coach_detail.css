@@ -19,7 +19,6 @@
 /*  */
 a:visited,
 a:active,
-a:link,
 a {
   text-decoration: none;
   color: #000;
@@ -117,9 +116,9 @@ nav .userMenu a:last-child::before {
 }
 .detailInTop {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 1200px;
   height: auto;
 }
 .inTopLeft {
@@ -127,9 +126,9 @@ nav .userMenu a:last-child::before {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: 725px;
   padding: 10px 0;
+  flex: 1 1 100%;
 }
 .coachCard {
   display: flex;
@@ -146,6 +145,7 @@ nav .userMenu a:last-child::before {
   background: url(/udt_project/test/img/coachCard.png) no-repeat 100% / cover;
 }
 .coachCardDetail {
+  flex: 1 0 0;
   display: flex;
   gap: 15px;
   padding: 0 20px;
@@ -306,9 +306,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 725px;
   gap: 30px;
+  flex: 1 1 100%;
+  padding: 0 0 0 50px;
 }
 .coachInfo {
   display: flex;
@@ -321,6 +322,9 @@ h3 {
 }
 .infoContents {
   list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .infoTitle > li {
   display: flex;
@@ -363,14 +367,27 @@ h3 {
   color: #B88CF0;
 }
 .coachSlider {
+  display: flex;
+  justify-content: center;
+  width: 1100px;
+  position: relative;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: -15px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: -15px;
+}
+.swiper .mySwiper {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 90%;
+  height: 244px;
+}
+.swiper-wrapper {
   width: 100%;
 }
-.swiper {
-  width: 1200px;
-  height: 244px;
-  padding: 0 50px;
-}
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -380,11 +397,16 @@ h3 {
   align-items: center;
   flex-direction: column;
 }
+.swiper-slide a {
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  border-radius: 10px;
+  overflow: hidden;
+}
 .slideImg {
-  width: 195px;
+  width: 100%;
   height: 205px;
   background: url(/udt_project/test/img/coachCard.png)no-repeat 100% / cover;
-  box-shadow: 1.948px 2.597px 19.48px 0px rgba(0, 0, 0, 0.30);
+  /* box-shadow: 1.948px 2.597px 19.48px 0px rgba(0, 0, 0, 0.30); */
 }
 .swiper-slide .coachCardDetail {
   gap: 10px;

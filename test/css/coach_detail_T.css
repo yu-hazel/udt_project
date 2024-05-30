@@ -1,0 +1,23 @@
+.detailInner {
+  height: auto
+}
+.detailInTop {
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  gap: 50px;
+}
+.inTopLeft {
+  gap: 30px;
+  padding: 30px 0 0 0;
+  height: auto;
+  justify-content: flex-start;
+}
+.inTopRight {
+  padding: 0 200px 0 0;
+}
+.swiper {
+  width: 1200px;
+  height: 244px;
+  padding: 0 50px;
+}
