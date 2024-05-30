@@ -42,7 +42,7 @@ async function loadData() {
 
   var imageSrc = "/udt_project/test/img/pin_logo.png", // 커스텀마커 이미지
     imageSize = new kakao.maps.Size(40), // 마커이미지의 크기입니다
-    imgOpt = { offset: new kakao.maps.Point(20, 40) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+    imgOpt = { offset: new kakao.maps.Point(65, 40) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
   // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
   var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOpt);
@@ -57,25 +57,26 @@ async function loadData() {
   }
   // 오버레이후 보여지는 화면
   // var content = document.querySelector("#wrap")
-  var content = 
-    '<div class="wrap">' + 
-    '    <div class="info">' +
-    '        <div class="title">' +
-    "            무야호~" +
-    '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
-    "        </div>" +
-    '        <div class="body">' +
-    '            <div class="img">' +
-    '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-    "           </div>" +
-    '            <div class="desc">' +
-    '                <div class="ellipsis">아즈카반의 5-23실</div>' +
-    '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
-    '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
-    "            </div>" +
-    "        </div>" +
-    "    </div>" +
-    "</div>";
+  var content = `
+  <div class="wrap"> 
+    <div class="info">
+      <div class="title"> 
+        이승빈
+          <div class="close" onclick="closeOverlay()" title="닫기"></div> 
+              </div> 
+            <div class="body">
+                <div class="img"> 
+                    <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">
+                </div>
+                <div class="desc">
+                    <div class="ellipsis">프로 강사</div>
+                    <div class="jibun ellipsis">테니스 경력 5년 코치의 레슨</div>
+                    <div><a href="#" target="_blank" class="link"></a></div>
+                </div> 
+      </div> 
+    </div>
+  </div>`;
+    
 
   var overlay = new kakao.maps.CustomOverlay({
     content: content,

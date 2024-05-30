@@ -9,12 +9,14 @@
   <link rel="stylesheet" href="/udt_project/test/css/main.css">
   <link rel="stylesheet" href="/udt_project/test/css/map.css">
   <link rel="stylesheet" href="/udt_project/test/css/local.css">
+  <link rel="stylesheet" media="all and (max-width: 1199px)" href="/udt_project/test/css/local_t.css">
+  <link rel="stylesheet" media="all and (max-width: 766px)" href="/udt_project/test/css/local_m.css">
 </head>
 
 <body>
   <header>
     <div class="topBanner">회원가입하고 즉시 20% 레슨 할인쿠폰 받기!</div>
-    <nav>
+    <nav class="topNav">
       <div class="logoCatWrapper">
         <div class="logo">우리동네 테니스</div>
         <div class="catMenu">
@@ -28,6 +30,13 @@
         <a href="#">회원가입</a>
         <a href="#">마이페이지</a>
       </div>
+    </nav>
+    <nav class="bottomNav">
+      <a href="#"><iconify-icon icon="material-symbols-light:local-cafe-outline"></iconify-icon>커뮤니티</a>
+      <a href="local.html"><iconify-icon icon="material-symbols-light:calendar-month-outline"></iconify-icon>예약</a>
+      <a href="#"><iconify-icon icon="material-symbols-light:home-outline"></iconify-icon>홈</a>
+      <a href="#"><iconify-icon icon="circum:heart"></iconify-icon>찜</a>
+      <a href="login.html"><iconify-icon icon="fluent:person-20-regular"></iconify-icon>로그인</a>
     </nav>
   </header>
   <div class="selectArea">
@@ -96,6 +105,11 @@
       <a href="#">이용약관</a>
       <a href="#" class="personal">개인정보처리방침</a>
     </div>
+    <div class="contact">
+      <div>Contact</div>
+      <div>010-0000-0000</div>
+      <div>https://github.com/udtennis/udt_project</div>
+    </div>
     <div class="copyright">
       <div>&copy; 미정이네</div>
       <div>대표 : 이승빈</div>
@@ -105,7 +119,8 @@
   <script src="/udt_project/test/js/local.js"></script>
     <!-- api 맵 구현 script -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/udt_project/test/js/supabaseMapScript.js"></script>
+    <!-- <script src="/udt_project/test/js/supabaseMapScript.js"></script> -->
+    <script src="/udt_project/test/js/mapCustomTest2.js"></script>
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8fa566ae5d765eb1a068de2fe2240a95"></script>
 </body>
 

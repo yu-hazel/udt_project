@@ -143,3 +143,11 @@
   color: #fff;
   font-weight: 600;
 }
+.bottomNav {
+  display: none;
+}
+footer .contact {
+  display: flex;
+  gap: 15px;
+  color: #fff;
+}
