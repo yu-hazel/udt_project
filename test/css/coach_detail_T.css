@@ -13,11 +13,3 @@
   height: auto;
   justify-content: flex-start;
 }
-.inTopRight {
-  padding: 0 200px 0 0;
-}
-.swiper {
-  width: 1200px;
-  height: 244px;
-  padding: 0 50px;
-}
