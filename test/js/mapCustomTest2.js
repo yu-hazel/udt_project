@@ -66,7 +66,7 @@ async function loadData() {
               </div> 
             <div class="body">
                 <div class="img"> 
-                    <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">
+                    <img src="/udt_project/test/img/profile_4.png" width="73" height="70">
                 </div>
                 <div class="desc">
                     <div class="ellipsis">프로 강사</div>
