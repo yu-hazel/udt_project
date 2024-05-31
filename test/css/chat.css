@@ -372,13 +372,14 @@ section {
 }
 .chatRoom .user .userTxt,
 .chatRoom .coach .coachTxt {
-  display: flex;
-  align-items: center;
   height: 41px;
   padding: 9px 10px 8px 10px;
   border: 1px solid #d3d3d3;
   border-radius: 13px;
   background-color: #fff;
+}
+.chatRoom .user .userTxt {
+  border-color: #d7c7ec;
 }
 .chatMessage {
   display: flex;
