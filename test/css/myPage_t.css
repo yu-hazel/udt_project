@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* 우동테 main tab css */
-
+.cont-select{
+  display: none;
+}
 .topNav .catMenu,
 .topNav .userMenu {
   display: none;
@@ -79,6 +81,11 @@ header .topBanner{
   font-size: 25px;
   font-weight: 600;
 }
-.mySec >div{
+.mySec>div{
+  font-size: 10px;
+}
+
+.mySec>div,
+.paymentSec>div {
   font-size: 25px;
 }

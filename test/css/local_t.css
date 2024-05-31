@@ -15,7 +15,7 @@ header>div:nth-child(1){
 div.reservation{
   display: none;
   order: 2;
-}
+} 
 .reservation {
   width: 100%;
   display: flex;

@@ -98,7 +98,7 @@
 }
 .list-member li {
   width: 100%;
-  box-sizing: border -box;
+  box-sizing: border-box;
 }
 .list-member li button {
   width: 100%;
