@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* 우동테 login mobile css */
+
+body {
+    min-width: 320px;
+}
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+.loginLogo::before {
+    width: 33px;
+    height: 37px;
+    top: -4px;
+    left: -35px;
+}
+.topSec,
+.bottomSec {
+    width: 90%;
+}
+.topSec {
+    display: flex;
+    justify-content: center;
+}
+.topSec > form {
+    width: 90%;
+    padding: 0;
+}
+#userMail, #password, .loginBt, .signUpBt {
+    width: 100%;
+}

@@ -80,9 +80,7 @@ footer .serviceSec a {
 footer .serviceSec .personal {
     color: #8530ff;
 }
-footer .contact {
-    color: #000;
-}
+footer .contact,
 footer .copyright {
     color: #000;
 }

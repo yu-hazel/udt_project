@@ -42,7 +42,8 @@ body{
     font-size: 28px;
     font-weight: 400;
     position: relative;
-    margin-left: 39px
+    margin-left: 39px;
+    text-decoration: none;
 }
 .loginLogo::before {
     position: absolute;
