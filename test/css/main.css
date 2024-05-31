@@ -172,14 +172,14 @@ footer .serviceSec a {
 footer .serviceSec .personal {
   color: #d0aaff;
 }
+footer .copyright {
+    display: flex;
+    gap: 30px;
+    color: #fff;
+    font-size: 16px;
+}
 footer .contact {
   display: flex;
   gap: 15px;
   color: #fff;
-}
-footer .copyright {
-  display: flex;
-  gap: 30px;
-  color: #fff;
-  font-size: 16px;
 }
