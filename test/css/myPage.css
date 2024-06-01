@@ -9,6 +9,9 @@
   justify-content: center;
   border-top:1px solid rgba(0, 0, 0, 0.20);
 }
+.cont-select {
+  display: none;
+}
 .mainSection{
   display: flex;
   padding: 50px 133px;
@@ -142,4 +145,12 @@
 .eventTxt{
   color: #fff;
   font-weight: 600;
+}
+.bottomNav {
+  display: none;
+}
+footer .contact {
+  display: flex;
+  gap: 15px;
+  color: #fff;
 }

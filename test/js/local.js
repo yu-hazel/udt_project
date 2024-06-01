@@ -9,3 +9,11 @@ list.addEventListener("click", event => {
     btn.classList.remove("on");
   }
 });
+document.getElementById("dropdownTrigger").addEventListener("click", () =>  {
+    const selectArea = document.querySelector(".selectArea");
+    if (selectArea.classList.contains("active")) {
+      selectArea.classList.remove("active");
+    } else {
+      selectArea.classList.add("active");
+    }
+  });

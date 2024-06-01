@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* 지역 선택페이지 CSS */
+.mainLocal{
+  display: flex;
+}
 .selectArea {
   display: flex;
   padding: 30px 20px;
@@ -44,17 +47,14 @@
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.30);
 }
-
 .choicePlace>div {
   font-weight: bolder;
 }
-
 /* 동네선택하기 */
 .cont-select {
   position: relative;
   width: 170px;
 }
-
 .btn-select {
   width: 100%;
   padding: 13px 30px 13px 14px;
@@ -96,16 +96,13 @@
   animation-duration: 500ms;
   animation-direction: normal;
 }
-
 .btn-select.on~.list-member {
   display: block;
 }
-
 .list-member li {
   width: 100%;
-  box-sizing: border -box;
+  box-sizing: border-box;
 }
-
 .list-member li button {
   width: 100%;
   padding: 7px 10px;
@@ -113,35 +110,28 @@
   background-color: #fff;
   cursor: pointer;
   text-align: center;
-  /* 말줄임 */
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .rdBt {
   border-radius: 0 0 8px 8px;
 }
-
 .list-member li button:hover,
 .list-member li button:focus {
   background-color: #9a9a9a;
   color: #fff;
 }
-
 .c_list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 37px;
-
 }
-
 .cList {
   font-size: 20px;
   font-weight: bold;
 }
-
 .cL {
   display: flex;
   flex-direction: column;
@@ -150,22 +140,18 @@
   overflow-y: scroll;
   padding-right: 7px;
 }
-
 .cL::-webkit-scrollbar {
   width: 7px;
 }
-
 .cL::-webkit-scrollbar-thumb {
   height: 30%;
   background: #e3fa5c;
   border-radius: 10px;
 }
-
 .cL::-webkit-scrollbar-track {
   background: rgba(33, 122, 244, .1);
   border-radius: 10px;
 }
-
 .coachList {
   display: flex;
   flex-direction: column;
@@ -175,27 +161,22 @@
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.40);
 }
-
 .coachList span {
   font-size: 20px;
   font-weight: bold;
 }
-
 .coachList .career {
   position: relative;
   color: #3b3b3b;
   font-weight: bold;
 }
-
 .coachList .pay {
   font-size: 12px;
 }
-
 .coachList .text,
 .pay {
   color: #535353;
 }
-
 .coachList .badge {
   display: flex;
   padding: 5px 10px;
@@ -205,4 +186,15 @@
   font-size: 12px;
   border-radius: 10px;
   background-color: #e3fa5c;
+}
+.bottomNav{
+  display: none;
+}
+footer { 
+  gap: 15px;
+}
+footer .contact {
+  display: none;
+  gap: 15px;
+  color: #fff;
 }
