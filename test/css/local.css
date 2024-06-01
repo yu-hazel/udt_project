@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* 지역 선택페이지 CSS */
+.mainLocal{
+  display: flex;
+}
 .selectArea {
   display: flex;
   padding: 30px 20px;
