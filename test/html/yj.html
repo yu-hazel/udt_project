@@ -8,27 +8,11 @@
   <!-- 로고 넣기 -->
   <title>우동테 결제 페이지</title>
   <link rel="stylesheet" href="/udt_project/test/css/yj.css">
+  <link rel="stylesheet" media="all and (max-width:1200px)" href="/udt_project/test/css/yj_tab.css">
+  <link rel="stylesheet" media="all and (max-width:766px)" href="/udt_project/test/css/yj_mo.css">
 </head>
 
 <body>
-  <header>
-    <div class="topBanner">회원가입하고 즉시 20% 레슨 할인쿠폰 받기!</div>
-    <nav>
-      <div class="logoCatWrapper">
-        <div class="logo">우리동네 테니스</div>
-        <div class="catMenu">
-          <a href="#">테니스 예약</a>
-          <a href="#">커뮤니티</a>
-          <a href="#">비즈니스</a>
-        </div>
-      </div>
-      <div class="userMenu">
-        <a href="#">로그인</a>
-        <a href="#">회원가입</a>
-        <a href="#">마이페이지</a>
-      </div>
-    </nav>
-  </header>
   <section>
     <div class="sec">
       <h1>결제하기</h1>
@@ -36,36 +20,48 @@
         <div class="innerLeft">
           <div class="content01">
             <h2>레슨 예약 내용</h2>
-            <div class="profileBox">
-              <img src="/udt_project/test/img/profile_5.png" alt="이미지">
-              <div>
-                <h3>장기성과 함께하는
-                  수펄테니스~!
-                </h3>
+            <div id="cartItem">
+              <div class="profileBox">
+                <img src="/udt_project/test/img/profile_5.png" alt="이미지">
                 <div>
-                  <div class="profileImg">
-                    <img src="/udt_project/test/img/profile_7.png" alt="프로필이미지">
+                  <h3>장기성과 함께하는
+                    수펄테니스~!
+                  </h3>
+                  <div>
+                    <div class="profileImg">
+                      <img src="/udt_project/test/img/profile_7.png" alt="프로필이미지">
+                    </div>
+                    <span>장기성</span>
                   </div>
-                  <span>장기성</span>
                 </div>
               </div>
+              <div class="table01">
+                <span>
+                  강의내용
+                </span>
+                <span>
+                  (입문반) 실외 자세 교정 트레이닝
+                </span>
+              </div>
+              <div class="table02">
+                <span>
+                  개월선택
+                </span>
+                <span>
+                  <span id=downBtn><i class="fa-solid fa-caret-down"></i></span>
+                  <span>1개월</span>
+                  <span id=upBtn><i class="fa-solid fa-caret-up"></i></span>
+                </span>
+              </div>
+              <div class="table03">
+                <span>
+                  가격
+                </span>
+                <span>
+                  160,000원
+                </span>
+              </div>
             </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>강의 내용</th>
-                  <th>개월 선택</th>
-                  <th>가격</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>(입문반) 실외 자세 교정 트레이닝</td>
-                  <td>1개월</td>
-                  <td>160,000원</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
           <div class="content02">
             <ul class="con02Left">
@@ -86,7 +82,7 @@
                 <input type="checkbox">마케팅 수신 · 홍보 목적의 개인정보 수집 및 이용에 동의합니다.(선택)<br>
                 <input type="checkbox">장기 미접속 시 계정 활성 상태 유지합니다.(선택)
               </div>
-              <button type="submit">휴대폰 인증</button>
+              <div> <button type="submit">휴대폰 인증</button></div>
             </form>
           </div>
           <div class="content03">
@@ -120,19 +116,6 @@
       </div>
     </div>
   </section>
-
-  <footer>
-    <div class="serviceSec">
-      <a href="#">이용약관</a>
-      <a href="#" class="personal">개인정보처리방침</a>
-    </div>
-    <div class="copyright">
-      <div>&copy; 미정이네</div>
-      <div>대표 : 이승빈</div>
-      <div>공동대표 : 박강민 장기성 권윤지 유혜인</div>
-    </div>
-  </footer>
-
 
 </body>
 

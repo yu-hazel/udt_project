@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* 우동테 결제 페이지 모바일 */
+.sec {
+  min-width: 320px;
+}
+h1 {
+  font-size: 26px;
+}
+/* con01 */
+.content01 {
+  gap: 20px;
+}
+h2 {
+  font-size: 18px;
+}
+.profileBox {
+  height: 63px;
+}
+.profileBox > img {
+  width: 63px;
+  height: 63px;
+}
+.profileBox > div {
+  width: 100%;
+}
+.profileBox h3 {
+  font-size: 14px;
+}
+.profileImg > img {
+  width: 24px;
+  height: 24px;
+}
+.profileBox > div span {
+  font-size: 11px;
+  line-height: 24px;
+}
+.table01, .table02, .table03 {
+  gap: 5px;
+  font-size: 11px;
+}
+.table01 {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+.table02, .table03 {
+  flex: 1 1 48%;
+}
+
+/* con02 */
+.content02 {
+  flex-direction: column;
+  gap: 12px;
+}
+.con02Right > input {
+  margin: 0 10px 12px 5px;
+}
+.con02Left {
+  width: 100%;
+}
+.con02Left h2 {
+  font-size: 18px;
+}
+.con02Left ul {
+  padding-left: 29px;
+}
+.con02Left ul li {
+  font-size: 12px;
+}
+.con02Right {
+  font-size: 11px;
+}
+.con02Right > div {
+  font-size: 9px;
+  padding-bottom: 10px;
+}
+.con02Right > div > input {
+  margin: 0 6px 7px 11px;
+}
+/* 버튼 공통 스타일 선언 */
+.con02Right button, .innerRight a {
+  width: 160px;
+  font-size: 14px;
+}
+/* 버튼 가운데정렬 */
+.con02Right div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+/* con03 */
+.content03 h2 {
+  font-size: 18px;
+}
+.content03 .payBoxSet {
+  gap: 10px;
+}
+.content03 .payBox {
+  flex: 0 0 auto;
+  height: 40px;
+  width: 80px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+/* inner right */
+.paymentCheck {
+  font-size: 13px;
+}
+.innerRight h3 {
+  font-size: 13px;
+}
+
+/* 모바일 화면 내에서 세부 분기점 추가(패딩값 변경) */
+@media screen and (max-width: 550px) {
+  .sec {
+    padding: 20px 10px;
+    gap: 10px;
+  }
+  .content01, .content02, .content03, .innerRight {
+    padding: 20px 10px;
+  }
+}
