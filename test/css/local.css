@@ -110,7 +110,6 @@
   background-color: #fff;
   cursor: pointer;
   text-align: center;
-  /* 말줄임 */
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
