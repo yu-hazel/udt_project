@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* 우동테 결제 페이지 태블릿 */
+.sec {
+  padding: 20px 20px;
+  gap: 20px;
+  width: 950px;
+}
+h1 {
+  font-size: 36px;
+}
+.sec-inner {
+  flex-direction: column;
+  gap: 10px;
+}
+.innerLeft {
+  gap: 10px;
+}
+/* 박스 공통 스타일 선언 */
+.content01, .content02, .content03, .innerRight {
+  padding: 30px 20px;
+}
+
+/* con01 */
+h2 {
+  font-size: 24px;
+}
+.profileBox {
+  height: 120px;
+}
+.profileBox > img {
+  width: 120px;
+  height: 120px;
+}
+.profileBox > div {
+  width: 100%;
+}
+.profileBox h3 {
+  font-size: 18px;
+}
+
+/* con02 */
+.content02 {
+  padding: 30px;
+  gap: 30px;
+}
+.con02Left, .con02Right {
+  flex: 0 1 auto;
+}
+.con02Left {
+  width: 299px;
+}
+.con02Left h2 {
+  font-size: 24px;
+}
+.con02Left ul {
+  padding-left: 10px;
+}
+.con02Left ul li {
+  font-size: 14px;
+}
+.con02Right > div {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.con02Right > div > input {
+  margin: 0 6px 13px -6px;
+}
+/* 버튼 공통 스타일 선언 */
+.con02Right button, .innerRight a {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+}
+
+/* con03 */
+.content03 h2 {
+  font-size: 24px;
+}
+.content03 .payBoxSet {
+  gap: 10px;
+}
+.content03 .payBox {
+  height: 60px;
+  font-size: 16px;
+}
+
+/* inner right */
+.innerRight {
+  align-items: center;
+  width: 100%;
+  position: static;
+}
+.paymentCheck {
+  width: 100%;
+  font-size: 16px;
+}
+.innerRight div {
+  width: 100%;
+}
+.innerRight h3 {
+  font-size: 16px;
+}

@@ -23,83 +23,6 @@ a {
   text-decoration: none;
 }
 
-/* 헤더 */
-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-header .topBanner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  background-color: #000;
-  color: #fff;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 13px 100px;
-}
-nav .logoCatWrapper {
-  display: flex;
-  gap: 30px;
-}
-nav .logo {
-  font-family: 'Jalnan';
-  color: #9552F0;
-  font-size: 24px;
-  font-weight: 400;
-}
-nav .logo::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: url(/udt_project/test/img/pin_logo.png) no-repeat;
-  background-size: cover;
-  left: -40px;
-  top: -7px;
-}
-nav .catMenu,
-nav .userMenu {
-  display: inherit;
-  justify-content: center;
-  align-items: center;
-  gap: 17px;
-}
-nav .catMenu a,
-nav .userMenu a {
-  color: #000;
-  font-weight: 500;
-  transition: 0.3s;
-}
-nav .catMenu a:hover,
-nav .userMenu a:hover {
-  color: #9747FF;
-}
-nav .catMenu a {
-  font-size: 18px;
-}
-nav .userMenu a {
-  font-size: 16px;
-  position: relative;
-}
-nav .userMenu a:last-child::before {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 16px;
-  background: url(/udt_project/test/img/mypage.png) no-repeat;
-  background-size: cover;
-  right: -19px;
-  top: 1px;
-}
 
 /* 섹션 */
 section {
@@ -111,7 +34,7 @@ section {
   flex-direction: column;
   padding: 20px 0px;
   gap: 30px;
-  width: 1420px;
+  max-width: 1440px;
 }
 h1 {
   font-size: 40px;
@@ -120,22 +43,26 @@ h1 {
 .sec-inner {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 20px;
   position: relative;
+  width: 100%;
 }
 .innerLeft {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 /* 박스 공통 스타일 선언 */
 .content01, .content02, .content03, .innerRight {
   display: flex;
-  padding: 40px 50px;
-  width: 940px;
-  border-radius: 30px;
-  border: 1px solid #676767;
+  justify-content: center;
+  padding: 40px 30px;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid #B3B3B3;
   background: #FFF;
 }
 
@@ -144,6 +71,10 @@ h1 {
   flex-direction: column;
   gap: 30px;
 }
+#cartItem {
+  display: flex;
+  flex-wrap: wrap;
+}
 h2 {
   font-size: 28px;
   font-weight: 700;
@@ -151,7 +82,9 @@ h2 {
 .profileBox {
   display: flex;
   gap: 30px;
+  flex: 1 1 100%;
   height: 200px;
+  margin-bottom: 30px;
 }
 .profileBox > img {
   width: 200px;
@@ -162,7 +95,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 610px;
+  width: 100%;
 }
 .profileBox h3 {
   font-size: 24px;
@@ -183,52 +116,31 @@ h2 {
   line-height: 40px;
   color: #676767;
 }
-table {
-  border-collapse: collapse;
-}
-thead th {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #676767;
-  color: #343434;
+/* 표 공통 스타일 선언 */
+.table01, .table02, .table03 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   font-size: 18px;
   font-weight: 400;
 }
-thead th:first-child {
-  text-align: left;
+.table01 > span:first-child, .table02 > span:first-child, .table03 > span:first-child {
+  border-bottom: 1px solid #676767;
+  padding-bottom: 10px;
 }
-thead th:last-child, tbody td:last-child {
-  text-align: right;
-}
-tbody td:nth-child(2) {
-  text-align: center;
-}
-tbody td {
-  padding-top: 10px;
-  font-size: 18px;
+.table01 > span:last-child, .table02 > span:last-child, .table03 > span:last-child {
   font-weight: 700;
 }
-tbody td:nth-child(2)::before, tbody td:nth-child(2)::after {
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
-  font-weight: 600;
-  position: relative;
-  top: 4px;
+.table01 {
+  flex: 1 1 49%;
 }
-tbody td:nth-child(2)::before {
-  content: "\f0d8";
-  margin-right: 10px;
-}
-tbody td:nth-child(2)::after {
-  content: "\f0d7";
-  margin-left: 10px;
+.table02, .table03 {
+  flex: 1 1 25%;
 }
 
 /* con02 */
 .content02 {
   justify-content: space-between;
-}
-.con02Left, .con02Right {
-  flex: 1 1 45%
 }
 .con02Left {
   list-style: none;
@@ -252,19 +164,19 @@ tbody td:nth-child(2)::after {
   font-weight: 500;
 }
 .con02Right > input {
-  margin: 0 10px 20px 0;
+  margin: 0 10px 20px -17px;
 }
 .con02Right > div {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   padding-bottom: 30px;
 }
 .con02Right > div > input {
-  margin: 0 10px 15px 15px;
+  margin: 0 6px 13px -6px;
 }
 /* 버튼 공통 스타일 선언 */
 .con02Right button, .innerRight a {
-  width: 400px;
+  width: 100%;
   height: 50px;
   padding: 10px;
   gap: 10px;
@@ -294,7 +206,7 @@ tbody td:nth-child(2)::after {
   gap: 9px;
 }
 .content03 .payBox {
-  width: 160px;
+  flex: 1 1 18%;
   height: 70px;
   border-radius: 20px;
   border: 1px solid #676767;
@@ -310,9 +222,10 @@ tbody td:nth-child(2)::after {
 .innerRight {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 30px;
   gap: 30px;
-  width: 460px;
+  width: 500px;
   position: sticky;
   top: 30px;
 }
@@ -328,6 +241,7 @@ tbody td:nth-child(2)::after {
 .innerRight div {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .innerRight h3 {
   font-size: 24px;
@@ -337,32 +251,4 @@ tbody td:nth-child(2)::after {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* 푸터 */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  background-color: #000;
-  padding: 40px 0;
-}
-footer .serviceSec {
-  display: inherit;
-  gap: 30px;
-}
-footer .serviceSec a {
-  color: #fff;
-  font-size: 16px;
-}
-footer .serviceSec .personal {
-  color: #d0aaff;
-}
-footer .copyright {
-  display: flex;
-  gap: 30px;
-  color: #fff;
-  font-size: 16px;
 }
