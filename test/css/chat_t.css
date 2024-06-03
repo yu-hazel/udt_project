@@ -1,1 +1,104 @@
 @charset "UTF-8";
+
+section {
+  /* 패딩 초기화 */
+  /* !important를 사용해 우선순위를 높일 수 있음. */
+  padding: 0;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  font-size: 20px;
+}
+.topNav {
+  display: none;
+}
+footer {
+  display: none;
+}
+.chatMain {
+  display: none;
+}
+.chatAside {
+  flex: 1 0 0;
+  align-items: flex-start;
+  border: 0px;
+}
+.chatAsideTopMo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #9747ff;
+  width: 100%;
+  height: 100px;
+}
+.chatSearch {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  gap: 10px;
+}
+.chatList {
+  width: 100%;
+  padding-bottom: 60px;
+}
+.chatList > div:nth-child(2),
+.chatList > div:nth-child(4),
+.chatList > div:nth-child(6) {
+  background-color: #f4f4f4;
+}
+.chatList div {
+  width: 100%;
+  /* height: 100px; */
+  padding-right: 5px;
+  border: none;
+}
+.chatList i {
+  font-size: 1.4rem;
+}
+.chatSearchBox {
+  width: 100%;
+}
+.chatDropdown {
+  display: none;
+}
+.chatTxtBoxTop h2 {
+  width: 100%;
+}
+.chatIcoGroup {
+  display: flex;
+  justify-content: flex-end;
+}
+.chatSelectMo {
+  display: block;
+}
+.chatSelectMo {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  width: 100%;
+}
+.chatSelectMo a {
+  font-size: 25px;
+  color: black;
+  font-weight: 500;
+  border: 0.0313rem solid #000;
+  border-radius: 20px;
+  padding: 7px;
+}
+.chatSelectMo a:hover {
+  background-color: #f4f4f4;
+}
+.chatSearchBox {
+  position: relative;
+}
+.chatSearchBox img {
+  top: 8px;
+  right: 10px;
+}
+.bottomNav {
+  display: flex;
+}

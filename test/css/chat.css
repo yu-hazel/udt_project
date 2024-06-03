@@ -176,17 +176,25 @@ section {
   background-color: #e2fb5b;
 }
 /* 드롭다운 css 끝 */
-.chatSearchBox {
+
+/* 반응형을 위해 none 처리 */
+.chatSelectMo {
+  display: none;
+}
+.chatAsideTopMo {
+  display: none;
+}
+.chatAsideTopMo .chatSearchBox {
   /* 돋보기 아이콘을 위해 relative 선언해둠 */
   position: relative;
 }
 .chatSearchBox img {
   position: absolute;
-  right: 5px;
-  top: 7px;
+  right: 45px;
+  top: 38px;
 }
 .chatSearchBox input {
-  width: 207px;
+  width: 100%;
   height: 40px;
   background: #f4f4f4;
   border-radius: 50px;
@@ -233,21 +241,25 @@ section {
 }
 .chatList > div {
   display: flex;
-  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #676767;
   gap: 15px;
   width: 100%;
   height: 140px;
-  /* 오른쪽에 패딩값을 준 이유 : 스크롤 바 때문에 채팅 박스 안에있는 내용물들이 오른쪽으로 쏠려서 보임 */
-  /* padding-right: 10px; */
+  padding-left: 15px;
   cursor: pointer;
 }
 .chatList > div:last-child {
   border: none;
+  /* padding-bottom: 60px; */
 }
-.chatList > div:hover {
-  background-color: #f4f4f4;
+.chatIcoGroup {
+  display: flex;
+  gap: 10px;
+}
+.chatIcoGroup p {
+  font-size: 14px;
+  color: #676767;
 }
 .chatTxtBox {
   display: flex;
@@ -438,4 +450,60 @@ footer .copyright {
   gap: 30px;
   color: #fff;
   font-size: 16px;
+}
+.chatMessageMo {
+  /* 테스트를 위해 배경색 추가 */
+  /* background-color: #e2fb5b; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 5px 0;
+}
+.chatMessageMo input {
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  border-radius: 50px;
+  border: 2px solid #d0aaff;
+  padding: 0 10px;
+  outline: none;
+}
+.chatMessageMo i {
+  padding: 10px 10px;
+  color: #d0aaff;
+}
+/* 테블릿 모바일 버전에 나오기 위해 none처리 해둠. */
+.chatMessageMo {
+  display: none;
+}
+.bottomNav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding: 13px 50px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+}
+.bottomNav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+}
+.bottomNav a:nth-of-type(3) {
+  color: #8530ff;
+}
+.bottomNav a:hover {
+  color: #8530ff;
+}
+iconify-icon {
+  font-size: 30px;
+}
+.bottomNav {
+  display: none;
 }
