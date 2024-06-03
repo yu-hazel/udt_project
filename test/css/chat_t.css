@@ -11,16 +11,18 @@ h2 {
 p {
   font-size: 20px;
 }
-.topNav {
-  display: none;
+.fa-arrow-right-from-bracket,
+.fa-bell,
+.fa-image,
+.fa-face-smile,
+.fa-paper-plane {
+  font-size: x-large;
 }
 footer {
   display: none;
 }
-.chatMain {
-  display: none;
-}
 .chatAside {
+  display: none;
   flex: 1 0 0;
   align-items: flex-start;
   border: 0px;
@@ -99,6 +101,45 @@ footer {
   top: 8px;
   right: 10px;
 }
+
+/* .chatMain css 시작 */
+.chatMain {
+  /* aside 부분과 비교를 위해 우선 none 처리 */
+  /* display: none; */
+}
+.chatMainSearchRightMo {
+  display: block;
+  color: #797979;
+}
+.chatMainSearch {
+  justify-content: space-between;
+}
+.searchContentsBox h2 {
+  font-size: 22px;
+}
+.searchContentsBox p {
+  font-size: 14px;
+}
+.searchContentsBoxTop {
+  justify-content: center;
+}
+.searchContentsBoxBottom {
+  gap: 20px;
+}
+.searchContentsBoxBottom p {
+  font-size: 12px;
+}
+.searchContentsBoxTopLeft .fa-heart,
+.chatMainSearchLeft img {
+  display: none;
+}
+.searchContentsBoxTopRight {
+  align-items: center;
+  gap: 5px;
+}
 .bottomNav {
   display: flex;
+}
+.topNav {
+  display: none;
 }

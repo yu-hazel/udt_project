@@ -15,3 +15,7 @@
 .chatList p {
   font-size: 16px;
 }
+.searchContentsBoxBottom {
+  flex-direction: column;
+  gap: 5px;
+}

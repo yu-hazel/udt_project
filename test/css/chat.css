@@ -425,6 +425,9 @@ section {
   display: flex;
   gap: 10px;
 }
+.chatMainSearchRightMo {
+  display: none;
+}
 footer {
   display: flex;
   flex-direction: column;
