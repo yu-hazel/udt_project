@@ -97,13 +97,14 @@ input {
     font-weight: 500;
     border: none;
     position: absolute;
-    top: 31px;
+    top: 30px;
     right: 10px;
     transition: 0.3s;
 }
 #userId + button:hover {
     background-color: #a680ff;
 }
+#idValError,
 #passConfirmError,
 #passValError {
     font-size: 12px;

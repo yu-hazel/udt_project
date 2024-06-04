@@ -1,5 +1,27 @@
 // 우동테 signin js
 
+// 아이디 조건 검사
+function validateId() {
+    const idValue = userId.value;
+
+    if (idValue.trim() === ""){
+        idValError.style.display = 'none';
+        return true;
+    }
+
+    const minLength = 6;
+    const maxLength = 20;
+    const regex = /[a-zA-z0-9]/;
+
+    if (idValue.length < minLength || idValue.length > maxLength || !regex.test(idValue)) {
+        idValError.style.display = 'block';
+        return false;
+    } else {
+        idValError.style.display = 'none';
+        return true;
+    }
+}
+
 // 비밀번호 일치 확인
 function passwordConfirm() {
     var password = document.getElementById("userPass").value;
@@ -31,7 +53,7 @@ function validatePassword() {
     const errorMessage = document.getElementById('passValError');
     const password = passWordInput.value;
 
-    // 입력된 비밀번호가 없을 때는 유효성 검사를 수행하지 않음
+    // 입력된 비밀번호 없을 때는 유효성 검사 수행 안함
     if (password.trim() === "") {
         errorMessage.style.display = 'none';
         return true;
@@ -51,21 +73,24 @@ function validatePassword() {
 }
 
 function attachEventListeners() {
-    const passWordInput = document.getElementById('userPass');
-    passWordInput.addEventListener('input', validatePassword);
-    passWordInput.addEventListener('blur', validatePassword); // 비밀번호 입력이 끝날 때 검사
+    userId.addEventListener('input', validateId);
+    userId.addEventListener('blur', validateId);
 
-    const passCheckInput = document.getElementById('userPassCheck');
-    passCheckInput.addEventListener('input', passwordConfirm);
+    userPass.addEventListener('input', validatePassword);
+    userPass.addEventListener('blur', validatePassword);
+
+    userPassCheck.addEventListener('input', passwordConfirm);
 
     window.addEventListener('resize', changePlaceholder);
-    changePlaceholder(); // 페이지가 로드될 때 placeholder 업데이트
+    changePlaceholder();
 }
 
 window.addEventListener('DOMContentLoaded', function() {
     attachEventListeners();
     passwordConfirm();
-    validatePassword(); // 페이지 로드 시에도 한 번 유효성 검사를 수행하여 에러 메시지를 감춤
+    validatePassword();
+    validateId();
+     // 페이지 로드 시에도 한 번 유효성 검사를 수행하여 에러 메시지를 감춤
 });
 
 // 도메인리스트 토글
