@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
+body {
+  min-width: 319px;
+}
 section {
-  /* 패딩 초기화 */
-  /* !important를 사용해 우선순위를 높일 수 있음. */
   padding: 0;
 }
 h2 {
@@ -21,10 +22,12 @@ p {
 footer {
   display: none;
 }
+.topBanner {
+  display: none !important;
+}
 .chatAside {
   display: none;
   flex: 1 0 0;
-  align-items: flex-start;
   border: 0px;
 }
 .chatAsideTopMo {
@@ -91,7 +94,7 @@ footer {
   border-radius: 20px;
   padding: 7px;
 }
-.chatSelectMo a:hover {
+.chatSelectMo a:active {
   background-color: #f4f4f4;
 }
 .chatSearchBox {
@@ -101,18 +104,48 @@ footer {
   top: 8px;
   right: 10px;
 }
-
 /* .chatMain css 시작 */
+/* 세로 쫀쫀이 구현 - vh(100vh 기준. 속 요소들 n빵 시키기) */
 .chatMain {
   /* aside 부분과 비교를 위해 우선 none 처리 */
   /* display: none; */
+  border: none;
+  height: 100vh;
 }
+.chatMainSearch {
+  height: 10vh;
+}
+.chatRoomContents {
+  height: 70vh;
+}
+.chatMessage {
+  height: 10vh;
+}
+.bottomNav {
+  height: 8vh;
+}
+/* ----------------------------------- */
 .chatMainSearchRightMo {
   display: block;
   color: #797979;
 }
 .chatMainSearch {
   justify-content: space-between;
+}
+#chatInput {
+  height: 50px;
+  border-radius: 50px;
+}
+.chatMessage {
+  padding: 0;
+  justify-content: flex-start;
+}
+.chatMessageIco {
+  padding: 10px 10px 0 10px;
+}
+.searchContentsBox {
+  /* 중앙 정렬을 위해 임시 패딩값 지정 */
+  padding-left: 50px;
 }
 .searchContentsBox h2 {
   font-size: 22px;

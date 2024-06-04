@@ -341,29 +341,19 @@ section {
 }
 /* 채팅 메세지 화면 구현 시작 */
 .chatRoom {
+  overflow-y: auto;
+  /* 가로 스크롤바 없애기 */
+  /* overflow-x: hidden; */
+}
+.chatRoomContents {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 20px;
-  height: 533px;
+  height: 640px;
   padding: 10px 20px;
   background: #f4f4f4;
   font-size: 17px;
-  line-height: 1.5;
-  overflow: scroll;
-  /* 가로 스크롤바 없애기 */
-  overflow-x: hidden;
-}
-.chatRoom::-webkit-scrollbar {
-  width: 10px; /* 세로축 스크롤바 폭 너비 */
-}
-.chatRoom::-webkit-scrollbar-thumb {
-  background: #e2fb5b; /* 스크롤바 막대 색상 */
-  border-radius: 12px 12px 12px 12px;
-}
-/* 스크롤이 움직이는 뒷 배경 */
-.chatRoom::-webkit-scrollbar-track {
-  background: #e7f1fe; /* 스크롤바 뒷 배경 색상 */
-  border-radius: 12px 12px 12px 12px;
 }
 .chatRoom img {
   width: 52px;
@@ -398,12 +388,12 @@ section {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 212px;
+  /* height: 212px; */
   padding: 20px 20px 15px 20px;
 }
-.chatMessage > textarea {
+.chatMessage > input {
   width: 100%;
-  height: 143px;
+  height: 50px;
   border-radius: 5px;
   border: 1px solid #676767;
   padding: 10px;

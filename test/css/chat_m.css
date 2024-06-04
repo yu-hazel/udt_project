@@ -15,7 +15,17 @@
 .chatList p {
   font-size: 16px;
 }
+.searchContentsBox {
+  gap: 0;
+}
 .searchContentsBoxBottom {
   flex-direction: column;
-  gap: 5px;
+  gap: 2px;
+}
+.chatRoom span {
+  font-size: 14px;
+}
+.userTxt,
+.coachTxt {
+  padding: 0;
 }

@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // 채팅창 기능
 document.addEventListener("DOMContentLoaded", function () {
   const chatInput = document.getElementById("chatInput");
-  const chatRoom = document.querySelector(".chatRoom");
+  const chatRoomContents = document.querySelector(".chatRoomContents");
 
   chatInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter" && !event.shiftKey) {
@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     messageTxt.appendChild(messageSpan);
     messageDiv.appendChild(messageTxt);
-    chatRoom.appendChild(messageDiv);
+    chatRoomContents.appendChild(messageDiv);
 
     // 새 메시지가 추가되면 자동 스크롤
-    chatRoom.scrollTop = chatRoom.scrollHeight;
+    chatRoomContents.scrollTop = chatRoomContents.scrollHeight;
   }
 });
 
@@ -138,3 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // 2. 드롭다운에서 '찜 목록'을 누르면 하트모양을 누른 코치만 나옴
 // 3. 채팅 텍스트 입력창 밑의 아이콘을 누르면 동작함(웃는 이모티콘은 이모지가,
 // 사진을 누르면 사진첩이)
+
+// 전체를 누르면 전체 강사만, 찜 목록을 누르면 찜 해놓은 강사만 나오게 하는 것도 탭박스 구조인지...?
+// 의문이 있다면..찜 해놓은 강사가 db에 저장돼있지 않다면 어떻게 해야하는지
