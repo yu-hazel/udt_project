@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 우동테 결제완료 태블릿 */
+
+/* sec01 */
+.sec01 i {
+  font-size: 80px;
+}
+.sec01 h1 {
+  font-size: 32px;
+}
+.sec01 > div {
+  font-size: 16px;
+  gap: 80px;
+}
+
+/* sec02 */
+.sec02 h2 {
+  font-size: 24px;
+}
+.paymentDetail > div:last-child {
+  font-size: 20px;
+}
+.btnSet > button, .btnSet > a {
+  width: 300px;
+  height: 40px;
+}

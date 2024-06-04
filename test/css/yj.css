@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 우동테 payment css */
+/* 우동테 결제 페이지 pc */
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 /* 눈누 Pretendard */
@@ -136,6 +136,10 @@ h2 {
 }
 .table02, .table03 {
   flex: 1 1 25%;
+}
+.table02 > span:last-child {
+  display: flex;
+  gap: 10px;
 }
 
 /* con02 */
