@@ -374,7 +374,7 @@ section {
 }
 .chatRoom .user .userTxt,
 .chatRoom .coach .coachTxt {
-  height: 41px;
+  height: auto;
   padding: 9px 10px 8px 10px;
   border: 1px solid #d3d3d3;
   border-radius: 13px;

@@ -42,7 +42,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// 채팅창 기능
+// // 채팅창 기능
+// document.addEventListener("DOMContentLoaded", function () {
+//   const chatInput = document.getElementById("chatInput");
+//   const chatRoomContents = document.querySelector(".chatRoomContents");
+
+//   chatInput.addEventListener("keypress", function (event) {
+//     if (event.key === "Enter" && !event.shiftKey) {
+//       event.preventDefault(); // 기본 엔터 동작 방지
+//       const message = chatInput.value.trim();
+//       if (message !== "") {
+//         addMessageToChatRoom(message);
+//         chatInput.value = ""; // 입력 필드 초기화
+//       }
+//     }
+//   });
+
+//   function addMessageToChatRoom(message) {
+//     const messageDiv = document.createElement("div");
+//     messageDiv.className = "user"; // 유저 메시지로 지정
+//     const messageTxt = document.createElement("div");
+//     messageTxt.className = "userTxt";
+//     const messageSpan = document.createElement("span");
+//     messageSpan.textContent = message;
+
+//     messageTxt.appendChild(messageSpan);
+//     messageDiv.appendChild(messageTxt);
+//     chatRoomContents.appendChild(messageDiv);
+
+//     // 새 메시지가 추가되면 자동 스크롤
+//     chatRoomContents.scrollTop = chatRoomContents.scrollHeight;
+//   }
+// });
+
+// 채팅창 기능 + 코치 자동 문구 기능
 document.addEventListener("DOMContentLoaded", function () {
   const chatInput = document.getElementById("chatInput");
   const chatRoomContents = document.querySelector(".chatRoomContents");
@@ -52,13 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault(); // 기본 엔터 동작 방지
       const message = chatInput.value.trim();
       if (message !== "") {
-        addMessageToChatRoom(message);
+        addUserMessage(message);
+        addCoachMessage(
+          "지금은 연락 가능한 시간이 아닙니다. 다음에 다시 연락해주세요 😃"
+        );
         chatInput.value = ""; // 입력 필드 초기화
       }
     }
   });
 
-  function addMessageToChatRoom(message) {
+  function addUserMessage(message) {
     const messageDiv = document.createElement("div");
     messageDiv.className = "user"; // 유저 메시지로 지정
     const messageTxt = document.createElement("div");
@@ -73,65 +109,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // 새 메시지가 추가되면 자동 스크롤
     chatRoomContents.scrollTop = chatRoomContents.scrollHeight;
   }
+
+  function addCoachMessage(message) {
+    const messageDiv = document.createElement("div");
+    messageDiv.className = "coach"; // 코치 메시지로 지정
+
+    const coachImg = document.createElement("img"); // 코치 프로필 이미지
+    coachImg.src = "/udt_project/test/img/profile_1.png";
+    coachImg.alt = "코치 프로필 사진";
+    messageDiv.appendChild(coachImg);
+
+    const messageTxt = document.createElement("div");
+    messageTxt.className = "coachTxt";
+
+    // 코치 메시지 텍스트 설정
+    messageTxt.textContent = message;
+
+    messageDiv.appendChild(messageTxt);
+    chatRoomContents.appendChild(messageDiv);
+
+    // 새 메시지가 추가되면 자동 스크롤
+    chatRoomContents.scrollTop = chatRoomContents.scrollHeight;
+  }
 });
-
-// // 채팅창 기능 + 코치 자동 문구 기능
-// document.addEventListener("DOMContentLoaded", function () {
-//   const chatInput = document.getElementById("chatInput");
-//   const chatRoom = document.querySelector(".chatRoom");
-
-//   chatInput.addEventListener("keypress", function (event) {
-//     if (event.key === "Enter" && !event.shiftKey) {
-//       event.preventDefault(); // 기본 엔터 동작 방지
-//       const message = chatInput.value.trim();
-//       if (message !== "") {
-//         addUserMessage(message);
-//         addCoachMessage(
-//           "지금은 연락 가능한 시간이 아닙니다. 다음에 다시 연락해주세요 😃"
-//         );
-//         chatInput.value = ""; // 입력 필드 초기화
-//       }
-//     }
-//   });
-
-//   function addUserMessage(message) {
-//     const messageDiv = document.createElement("div");
-//     messageDiv.className = "user"; // 유저 메시지로 지정
-//     const messageTxt = document.createElement("div");
-//     messageTxt.className = "userTxt";
-//     const messageSpan = document.createElement("span");
-//     messageSpan.textContent = message;
-
-//     messageTxt.appendChild(messageSpan);
-//     messageDiv.appendChild(messageTxt);
-//     chatRoom.appendChild(messageDiv);
-
-//     // 새 메시지가 추가되면 자동 스크롤
-//     chatRoom.scrollTop = chatRoom.scrollHeight;
-//   }
-
-//   function addCoachMessage(message) {
-//     const messageDiv = document.createElement("div");
-//     messageDiv.className = "coach"; // 코치 메시지로 지정
-
-//     const coachImg = document.createElement("img"); // 코치 프로필 이미지
-//     coachImg.src = "/udt/test/img/iprofile_2png.png";
-//     coachImg.alt = "코치 프로필 사진";
-//     messageDiv.appendChild(coachImg);
-
-//     const messageTxt = document.createElement("div");
-//     messageTxt.className = "coachTxt";
-
-//     // 코치 메시지 텍스트 설정
-//     messageTxt.textContent = message;
-
-//     messageDiv.appendChild(messageTxt);
-//     chatRoom.appendChild(messageDiv);
-
-//     // 새 메시지가 추가되면 자동 스크롤
-//     chatRoom.scrollTop = chatRoom.scrollHeight;
-//   }
-// });
 
 // 추가적으로 구현하고 싶은 부분
 // 1. 왼쪽 검색바에 코치 이름을 적으면 해당 코치만 나옴
