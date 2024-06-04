@@ -117,6 +117,7 @@ footer {
 }
 .chatRoomContents {
   height: 70vh;
+  /* overflow-y: auto; */
 }
 .chatMessage {
   height: 10vh;
