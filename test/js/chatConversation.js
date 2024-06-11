@@ -1,7 +1,9 @@
 // 채팅 서비스 기능
+
 // HTML 요소 선택
 const chatInput = document.getElementById("chatInput");
 const chatRoomContents = document.querySelector(".chatRoomContents");
+const sendButton = document.querySelector(".fa-paper-plane"); // 전송 버튼 선택
 
 // 현재 시간 가져오기
 function getCurrentTime() {
@@ -55,37 +57,7 @@ chatInput.addEventListener("keypress", (e) => {
   }
 });
 
-// 채팅창 기능
-document.addEventListener("DOMContentLoaded", function () {
-  const chatInput = document.getElementById("chatInput");
-  const chatRoomContents = document.querySelector(".chatRoomContents");
-
-  chatInput.addEventListener("keypress", function (event) {
-    if (event.key === "Enter" && !event.shiftKey) {
-      event.preventDefault(); // 기본 엔터 동작 방지
-      const message = chatInput.value.trim();
-      if (message !== "") {
-        addMessageToChatRoom(message);
-        chatInput.value = ""; // 입력 필드 초기화
-      }
-    }
-  });
-
-  function addMessageToChatRoom(message) {
-    const messageDiv = document.createElement("div");
-    messageDiv.className = "user"; // 유저 메시지로 지정
-
-    const messageTxt = document.createElement("div");
-    messageTxt.className = "userTxt";
-
-    const messageSpan = document.createElement("span");
-    messageSpan.textContent = message;
-
-    messageTxt.appendChild(messageSpan);
-    messageDiv.appendChild(messageTxt);
-    chatRoomContents.appendChild(messageDiv);
-
-    // 새 메시지가 추가되면 자동 스크롤
-    chatRoomContents.scrollTop = chatRoomContents.scrollHeight;
-  }
+// 전송 버튼 클릭 이벤트 리스너 추가
+sendButton.addEventListener("click", () => {
+  addChat();
 });
