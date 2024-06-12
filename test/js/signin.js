@@ -47,7 +47,7 @@ function changePlaceholder() {
     }
 }
 
-// 비밀번호 유효성 검사
+// 비밀번호 조건 검사
 function validatePassword() {
     const passWordInput = document.getElementById('userPass');
     const errorMessage = document.getElementById('passValError');
