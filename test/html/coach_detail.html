@@ -111,7 +111,8 @@
             <ul class="infoTitle">
               <li> <span>자격 및 경력</span>
                 <ul class="infoContents">
-                  <li>마포고등학교, 울산대학교 졸업</li>
+                  <li>마포고등학교, 울산대학교 졸업 울산대학교 졸업 울산대학교 졸업 울산대학교 졸업 울산대학교 졸업 울산대학교 졸업 울산대학교 졸업
+                  </li>
                   <li>전국체전 테니스 대회 우승</li>
                   <li>전국 학생 선수권 테니스 대회 우승</li>
                   <li>전국 춘천오픈 대회 복식 준우승</li>
@@ -133,6 +134,18 @@
                   <li>Break Time : 12시~13시 / 17시~18시</li>
                   <li>매주 토요일 휴강</li>
                   <li>주 1회 25분 진행 </li>
+                  <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
+                  <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
+                  <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
+                  <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
+                  <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
+                  <li>매주 토요일 휴강</li>
+                  <li>주 1회 25분 진행 </li>
                 </ul>
               </li>
             </ul>
@@ -144,6 +157,8 @@
               </li>
             </ul>
           </div>
+          <span class="coachInfoBt01">상세내용</span>
+          <span class="coachInfoBt02">줄이기</span>
         </div>
       </div>
       <div class="detailInBottom">
@@ -346,18 +361,23 @@
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/18d360354d.js" crossorigin="anonymous"></script>
+  <script src="/udt_project/test/js/coachdetail.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 2,
+      slidesPerView: 5,
       spaceBetween: 10,
       loop: true,
       breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
         767: {
           slidesPerView: 3,
           spaceBetween: 10,
         },
-        1199: {
+        1200: {
           slidesPerView: 5,
           spaceBetween: 10,
         },
@@ -368,17 +388,46 @@
       },
     });
   </script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
-      /* // 모든 fa-heart 클래스를 가진 요소들을 선택 */
+  <script>const hearts = document.querySelectorAll("i.fa-heart");
+    hearts.forEach((each) => {
+      each.addEventListener("click", function () {
+        this.classList.toggle("red");
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 모든 fa-heart 클래스를 가진 요소들을 선택
       const heartIcons = document.querySelectorAll(".fa-heart");
-
       heartIcons.forEach(function (icon) {
         icon.addEventListener("click", function () {
-          /* // 클릭할 때마다 'red' 클래스를 토글 */
+          // 클릭할 때마다 'red' 클래스를 토글
           icon.classList.toggle("red");
         });
       });
-    });</script>
+    });
+  </script>
+  <script> const textWrapper = document.querySelector('.text-wrapper');
+    const text = document.querySelector('.text');
+    const moreText = document.querySelector('.more-text');
+    const lessText = document.querySelector('.less-text');
+
+    // 더보기 텍스트 클릭시 이벤트
+    moreText.addEventListener('click', () => {
+
+      moreText.style.display = 'none'; // 더보기 텍스트 삭제
+      lessText.style.display = 'inline-block'; // 줄이기 텍스트 표시
+      text.style.display = 'inline-block'; // 텍스트의 속성을 -webkit-box에서 일반 inline-block 으로 변경
+    });
+
+    // 줄이기 텍스트 클릭시 이벤트
+    lessText.addEventListener('click', () => {
+
+      lessText.style.display = 'none'; // 줄이기 텍스트 삭제
+      moreText.style.display = 'inline-block'; // 더보기 텍스트 표시
+      text.style.display = '-webkit-box'; // 텍스트의 속성을 다시 -webkit-box로 표시
+    }); 
+  </script>
 </body>
 
 </html>
