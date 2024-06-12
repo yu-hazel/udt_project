@@ -1,0 +1,42 @@
+.detailInTop {
+  width: 100%;
+}
+.coachSlider {
+  width: 300px;
+}
+.percent {
+  gap: 2px;
+  padding: 0 0 0 0;
+  width: 95%;
+  max-width: 500px;
+}
+.lessonbox {
+  padding: 0 0;
+}
+h3 {
+  font-size: 16px;
+}
+.lesson {
+  max-width: 500px;
+}
+.selectbox01 > span, .selectbox02 > span {
+  font-size: 12px;
+}
+.inTopRight {
+  width: 100%;
+}
+.inTopLeft {
+  width: 100%;
+}
+.percent span {
+  font-size: 16px;
+}
+h3 {
+  font-size: 12px;
+}
+.infoTitle > li > span {
+  font-size: 20px;
+}
+.infoTitle > li > ul > li {
+  font-size: 14px;
+}
