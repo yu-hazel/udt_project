@@ -2,7 +2,7 @@
   width: 100%;
 }
 .coachSlider {
-  width: 300px;
+  width: 290px;
 }
 .percent {
   gap: 2px;
@@ -24,6 +24,9 @@ h3 {
 }
 .inTopRight {
   width: 100%;
+}
+.coachInfo {
+  padding: 0 0 0 10px;
 }
 .inTopLeft {
   width: 100%;

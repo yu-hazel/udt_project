@@ -1,3 +1,43 @@
+.topNav .catMenu,
+.topNav .userMenu {
+    display: none;
+}
+.topNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo {
+    margin-left: 40px;
+}
+.bottomNav {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 13px 50px;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.30);
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+}
+.bottomNav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+}
+.bottomNav a:nth-of-type(3) {
+    color: #8530ff;
+}
+.bottomNav a:hover {
+    color: #8530ff;
+}
+iconify-icon {
+    font-size: 30px;
+}
 .coachDetail {
   padding: 0 0 0 0;
 }
@@ -30,6 +70,7 @@
   width: 100%;
   height: auto;
   overflow: initial;
+  padding: 0 0 0 60px;
 }
 .coachSlider {
   width: 700px;
@@ -44,10 +85,13 @@
 .lesson {
   max-width: 565px;
 }
-.coachInfoBt01, .coachInfoBt02 {
-  display: none;
-}
 
+.coachInfo> div {
+  display: flex;
+  position: inherit;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* const textWrapper = document.querySelector('.text-wrapper');
 const text = document.querySelector('.text');
