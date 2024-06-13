@@ -16,12 +16,8 @@
 :root {
   font-family: 'Pretendard Variable', sans-serif;
 }
-/*  */
-a:visited,
-a:active,
 a {
   text-decoration: none;
-  color: #000;
 }
 header {
   display: flex;
@@ -98,6 +94,9 @@ nav .userMenu a:last-child::before {
   background-size: cover;
   right: -19px;
   top: 1px;
+}
+.bottomNav {
+  display: none;
 }
 .coachDetail {
   display: flex;
@@ -192,6 +191,15 @@ nav .userMenu a:last-child::before {
 /* 아이콘 위 부모에게 px값 줬음 */
 .liked i {
   color: #5E5E5E;
+}
+.fa-heart {
+  cursor: pointer;
+  color: #7F8C8D;
+  /* 기본 색상 */
+}
+.fa-heart.red {
+  color: red;
+  /* 클릭 후 색상 */
 }
 .percent {
   display: flex;
@@ -301,29 +309,6 @@ h3 {
   cursor: pointer;
   background: #B88CF0;
 }
-.coachInfoBt01, .coachInfoBt02 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 25px;
-  border-radius: 30px;
-  background: #F6F6F6;
-  box-shadow: 5px 4px 20px 0px rgba(0, 0, 0, 0.25);
-  border: 1px solid #F6F6F6;
-  color: #505050;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: -0.22px;
-}
-.coachInfoBt01:hover, .coachInfoBt02:hover {
-  cursor: pointer;
-  background: #B88CF0;
-}
-.coachInfoBt02 {
-  display: none;
-}
 .inTopRight {
   display: flex;
   flex-direction: column;
@@ -333,17 +318,41 @@ h3 {
   padding: 0 50px 0 50px;
   gap: 30px;
 }
+.coachInfo::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+  background : #C1C1C1;
+}
+.coachInfo::-webkit-scrollbar-thumb {
+  background: #B88CF0; /* 스크롤바 막대 색상 */
+  border-radius: 12px 12px 12px 12px;
+}
 .coachInfo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
   height: 650px;
-  overflow: hidden;
+  overflow: scroll;
+  scrollbar-face-color: #B88CF0;
 }
 .infoTitle {
   display: flex;
   padding: 0 0 0 40px;
+}
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  bottom: 0px;
+  left: 460px;
+  font-size: 16px;
+  color: #ffff;
+  background-color: #B88CF0;
+  border-radius: 50px;
+  padding: 10px 10px;
+  cursor: pointer;
 }
 .infoContents {
   list-style: disc;
@@ -396,12 +405,15 @@ h3 {
   justify-content: center;
   width: 1100px;
   position: relative;
+  padding: 0 48px;
 }
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
   right: -15px;
+  color: #B88CF0;
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
   left: -15px;
+  color: #B88CF0;
 }
 .swiper .mySwiper {
   display: flex;
@@ -421,21 +433,26 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.swiper-slide a {
   border: 1px solid rgba(0, 0, 0, 0.30);
   border-radius: 10px;
+}
+.swiper-slide a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
 }
 .slideImg {
   width: 100%;
   height: 205px;
   background: url(/udt_project/test/img/coachCard.png)no-repeat 100% / cover;
-  /* box-shadow: 1.948px 2.597px 19.48px 0px rgba(0, 0, 0, 0.30); */
 }
 .swiper-slide .coachCardDetail {
   gap: 10px;
   padding: 0 13px;
+  flex: 0;
 }
 .swiper-slide .nameAge {
   gap: 6px;
@@ -466,7 +483,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   background-color: #000;
   padding: 40px 0;
 }
@@ -482,17 +499,13 @@ footer .serviceSec .personal {
   color: #d0aaff;
 }
 footer .copyright {
+    display: flex;
+    gap: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+footer .contact {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   color: #fff;
-  font-size: 16px;
-}
-.fa-heart {
-  cursor: pointer;
-  color: #7F8C8D;
-  /* 기본 색상 */
-}
-.fa-heart.red {
-  color: red;
-  /* 클릭 후 색상 */
 }
