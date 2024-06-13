@@ -26,7 +26,7 @@ footer {
   display: none !important;
 }
 .chatAside {
-  /* display: none; */
+  display: none;
   flex: 1 0 0;
   border: 0px;
 }
@@ -107,7 +107,7 @@ footer {
 /* 세로 쫀쫀이 구현 - vh(100vh 기준. 속 요소들 n빵 시키기) */
 .chatMain {
   /* aside 부분과 비교를 위해 우선 none 처리 */
-  display: none;
+  /* display: none; */
   border: none;
   height: 100vh;
 }
