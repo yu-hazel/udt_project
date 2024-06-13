@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.chatAsideTopMo {
+  height: 50px;
+}
+.chatSelectMo a {
+  font-size: 20px;
+}
+.chatList > div {
+  height: 100px;
+}
+.chatList h2 {
+  font-size: 20px;
+}
+.chatList p {
+  font-size: 16px;
+}
+.searchContentsBox {
+  gap: 0;
+}
+.searchContentsBoxBottom {
+  flex-direction: column;
+  gap: 2px;
+}
+.userTxt,
+.coachTxt {
+  padding: 0;
+}
