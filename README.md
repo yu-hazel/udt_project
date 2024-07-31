@@ -54,32 +54,5 @@ HTML5, CSS3, JavaScript를 이용한 **반응형 웹 퍼블리싱** 완성본입
 | 이메일 도메인 selectbox | 도메인 리스트를 토글하는 기능 <br> 사용자가 리스트 중 하나를 선택하면 해당 도메인으로 표시 |
 | 생년월일 selectbox | 연도, 월, 일에 대한 옵션을 반복문으로 생성하여 selectbox 구성 |
 
-<br>
-
-## 🙋‍♀️ 퍼블리싱 리더
-
-해당 프로젝트에서 퍼블리싱 리더로 진행했던 활동에 대한 정리 <br>
-
-### GitHub Commit, Pull Request 가이드 작성
-
-GitHub를 통한 프로젝트 진행을 위해 팀원들이 읽고 활용할 수 있는 가이드를 작성. <br>
-VSCode 소스 제어 탭을 활용한 commit, push, branch 생성 및 관리를 포함하여 커밋을 Pull Request하는 과정까지를 담았음. <br>
-[📂 노션 링크로 전체 보기](https://jellycinnamon.notion.site/GitHub-Commit-PR-Guide-2b0ea0294ba04d66951dbd31b7dc83f7)
-
-👇 일부 보기
-![FireShot Capture 003 - GitHub Commit   PR Guide - jellycinnamon notion site 1](https://github.com/user-attachments/assets/3511014b-fba7-4f88-ac4f-281d86a2d7f4) | ![FireShot Capture 003 - GitHub Commit   PR Guide - jellycinnamon notion site 2](https://github.com/user-attachments/assets/21ff551c-b21b-408f-9dfe-095ce8e13791)
-| --- | --- |
-
-
-### 퍼블리싱 가이드 작성
-
-퍼블리싱을 할 때 서로 맞추어야 할 기본적인 사항들(네이밍 규칙, 들여쓰기 등)을 정리한 가이드를 작성. <br>
-[📂 노션 링크로 전체 보기](https://jellycinnamon.notion.site/0de42d6209cc4fa3919dbaf6c4227ce4)
-
-
-### 코드리뷰 가이드 작성
-
-팀원들이 커밋을 PR(Pull Request)할 때와 회의 중 코드 리뷰를 진행할 때 참고할 수 있는 가이드를 작성. <br>
-[📂 노션 링크로 전체 보기](https://jellycinnamon.notion.site/477cb7eb212e4dcc8f21dbd9e1ebb7ec)
 
 
